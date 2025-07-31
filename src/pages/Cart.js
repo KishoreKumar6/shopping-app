@@ -1,32 +1,55 @@
 import { useCart } from "../context/CartContext";
 import CartItem from "../components/CartItem";
-
+import useDarkMode from "../hooks/useDarkMode";
 
 function Cart() {
-    const { cart, clearCart } = useCart();
+  const { cart, clearCart, getTotalPrice } = useCart();
+  const [darkMode, setDarkMode] = useDarkMode();
 
-    return (
-        <div className="container mx-auto p-6">
-            <h2 className="text-2xl font-bold mb-4">Shopping cart</h2>
-            {cart.length === 0 ? (
-                <p>Your Cart is empty</p>
-            ) : (
-                <div>
-                    {cart.map((item) => (
-                        <CartItem key={item.id} item={item} />
-                    ))}
-                    <button onClick={clearCart}
-                        className="bg-red-400 rounded py-2 px-4 mt-10"
-                    >
-                        Clear Cart
-                    </button>
-                </div>
-            )}
+  const bgColor = darkMode ? "bg-black" : "bg-white";
+  const textColor = darkMode ? "text-white" : "text-black";
+  const buttonClasses = darkMode
+    ? "bg-yellow-400 text-black hover:bg-yellow-300"
+    : "bg-gray-800 text-white hover:bg-gray-700";
 
+  return (
+    <div className={`${bgColor} ${textColor} min-h-screen`}>
+      <div className="container mx-auto p-6">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-2xl font-bold">Shopping cart</h2>
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className={`px-4 py-2 rounded ${buttonClasses}`}
+          >
+            {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
+          </button>
         </div>
-    )
 
+        {cart.length === 0 ? (
+          <p>Your Cart is empty</p>
+        ) : (
+          <div>
+            {cart.map((item) => (
+              <CartItem key={item.id} item={item} />
+            ))}
 
+            <div className="text-right mt-6 text-xl font-semibold">
+              Total: ${getTotalPrice().toFixed(2)}
+            </div>
+
+            <div className="mt-4 text-right">
+              <button
+                onClick={clearCart}
+                className="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 hover:cursor-pointer"
+              >
+                Clear Cart
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
 
-export default Cart
+export default Cart;

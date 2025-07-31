@@ -1,5 +1,3 @@
-
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -8,6 +6,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
 import CheckOutPage from "./pages/CheckOutPage";
 import { CartProvider } from "./context/CartContext";
+import OrderSummary from "./pages/OrderSummary";
 
 const App = () => (
   <CartProvider>
@@ -18,10 +17,10 @@ const App = () => (
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<CheckOutPage />} />
+        <Route path="/order-summary" element={<OrderSummary />} />
       </Routes>
       <Footer />
     </Router>
   </CartProvider>
-
 );
-export default App
+export default App;
