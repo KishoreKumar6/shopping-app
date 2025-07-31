@@ -26,36 +26,39 @@ An elegant, responsive e-commerce web app built with React, Tailwind CSS, and co
 
 ---
 
-## 📷 Screenshots
-
-> Add images here if needed! You can drag screenshots of your Home, Cart, and Checkout pages.
-
----
 
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/yourusername/online-shopping-app.git
-cd online-shopping-app
+git clone https://github.com/KishoreKumar6/shopping-app
+cd shopping-app
 npm install
 npm start
 
 
+## 🧱 App Structure
+
+```plaintext
 src/
 ├── components/
-│   ├── Header.jsx
-│   ├── Footer.jsx
-│   ├── ProductCard.jsx
-│   ├── SearchBar.jsx
-│   ├── Filter.jsx
-├── pages/
-│   ├── Home.jsx
-│   ├── Cart.jsx
-│   ├── CheckOutPage.jsx
+│   ├── CartItem.js
+│   ├── Filter.js
+│   ├── Footer.js
+│   ├── Header.js
+│   ├── ProductCard.js
+│   ├── SearchBar.js
 ├── context/
 │   └── CartContext.js
 ├── hooks/
 │   └── useDarkMode.js
+├── pages/
+│   ├── Cart.js
+│   ├── CheckOutPage.js
+│   ├── Home.js
+│   ├── OrderSummary.js
+│   └── ProductDetails.js
+├── App.js
+└── index.js
 
 
 🧠 Credits
