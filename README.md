@@ -57,12 +57,6 @@ src/
 ├── hooks/
 │   └── useDarkMode.js
 
-🎨 Customization
-Update shopping backimage.jpg in public/ for custom background.
-
-Tweak Tailwind classes for styling enhancements.
-
-Modify categories in Filter.jsx to suit your store's inventory.
 
 🧠 Credits
 Created by Kishore ✨ — with a passion for clean UI, scalable architecture, and dark mode friendliness.
