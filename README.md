@@ -1,5 +1,7 @@
 # 🛍️ Online Shopping Application
 
+Live: https://onlineshoppingcart1.netlify.app/
+
 An elegant, responsive e-commerce web app built with React, Tailwind CSS, and context-based state management. This app features dark mode support, cart functionality, product filtering, and a modern checkout experience.
 
 ---
