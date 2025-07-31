@@ -21,17 +21,16 @@ An elegant, responsive e-commerce web app built with React, Tailwind CSS, and co
 
 ## 🧑‍💻 Tech Stack
 
-| Frontend   | Styling        | State Management | Routing       |
-|------------|----------------|------------------|----------------|
-| React      | Tailwind CSS   | React Context     | React Router  |
-| HTML5      | CSS3           | useState/useEffect | Dynamic Routing |
+| Frontend | Styling      | State Management   | Routing         |
+| -------- | ------------ | ------------------ | --------------- |
+| React    | Tailwind CSS | React Context      | React Router    |
+| HTML5    | CSS3         | useState/useEffect | Dynamic Routing |
 
 ---
 
-
 ## 🛠️ Installation
 
-```bash
+````bash
 git clone https://github.com/KishoreKumar6/shopping-app
 cd shopping-app
 npm install
@@ -65,3 +64,4 @@ src/
 
 🧠 Credits
 Created by Kishore ✨ — with a passion for clean UI, scalable architecture, and dark mode friendliness.
+````
