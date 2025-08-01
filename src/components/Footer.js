@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-6 border border-gray-700">
-      <div className="container mx-auto px-4 text-center">
+    <footer className="bg-gray-900 text-white py-6 border-t border-gray-700">
+      <div className="max-w-screen-lg mx-auto px-4 text-center">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-2">
           <span className="text-sm sm:text-base">
             &copy; {new Date().getFullYear()}{" "}
@@ -10,7 +10,11 @@ function Footer() {
             </span>
             . All Rights Reserved.
           </span>
-          <span className="text-xs text-gray-400">
+          <span
+            className="text-xs text-gray-400"
+            role="img"
+            aria-label="shopping bag"
+          >
             🛍️ Crafted with care by Team Krish
           </span>
         </div>

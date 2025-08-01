@@ -20,7 +20,9 @@ function Filter({ onFilter }) {
         Electronics
       </option>
     </select>
+    
   );
-}
+} 
 
 export default Filter;
+

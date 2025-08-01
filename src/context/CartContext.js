@@ -42,7 +42,6 @@ export const CartProvider = ({ children }) => {
     return cart.reduce((total, item) => total + item.quantity, 0);
   }, [cart]);
 
-
   const incrementQuantity = (id) => {
     setCart((prev) =>
       prev.map((item) =>

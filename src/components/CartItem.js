@@ -16,7 +16,7 @@ function CartItem({ item }) {
         <div className="flex items-center space-x-3 mt-3">
           <button
             onClick={() => decrementQuantity(item.id)}
-            className="bg-blue-500 hover:bg-blue-700 text-white text-lg font-bold px-3 py-1 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="bg-blue-500 hover:bg-blue-700 text-white text-lg font-bold px-3 py-1 rounded-full shadow-sm"
           >
             −
           </button>
@@ -25,7 +25,7 @@ function CartItem({ item }) {
           </span>
           <button
             onClick={() => incrementQuantity(item.id)}
-            className="bg-blue-500 hover:bg-blue-700 text-white text-lg font-bold px-3 py-1 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="bg-blue-500 hover:bg-blue-700 text-white text-lg font-bold px-3 py-1 rounded-full shadow-sm"
           >
             +
           </button>
@@ -33,7 +33,7 @@ function CartItem({ item }) {
       </div>
       <button
         onClick={() => removeFromCart(item.id)}
-        className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-red-300"
+        className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-300"
       >
         Remove
       </button>
