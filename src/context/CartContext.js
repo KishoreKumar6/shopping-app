@@ -32,12 +32,12 @@ export const CartProvider = ({ children }) => {
     setCart([]);
   };
 
-  // check if proudct is already in cart
+  // check if product is already in cart
   const isInCart = (id) => {
     return cart.some((item) => item.id === id);
   };
 
-  // calcualte total number of items in the cart
+  // calculate total number of items in the cart
   const cartCount = useMemo(() => {
     return cart.reduce((total, item) => total + item.quantity, 0);
   }, [cart]);
