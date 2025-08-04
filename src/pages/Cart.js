@@ -1,16 +1,22 @@
 import { useCart } from "../context/CartContext";
 import CartItem from "../components/CartItem";
 import useDarkMode from "../hooks/useDarkMode";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const { cart, clearCart, getTotalPrice } = useCart();
   const [darkMode, setDarkMode] = useDarkMode();
+  const navigate = useNavigate();
 
   const bgColor = darkMode ? "bg-black" : "bg-white";
   const textColor = darkMode ? "text-white" : "text-black";
   const buttonClasses = darkMode
     ? "bg-yellow-400 text-black hover:bg-yellow-300"
     : "bg-gray-800 text-white hover:bg-gray-700";
+
+  const handlePayNow = () => {
+    navigate("/checkout");
+  };
 
   return (
     <div className={`${bgColor} ${textColor} min-h-screen`}>
@@ -37,12 +43,19 @@ function Cart() {
               Total: ${getTotalPrice().toFixed(2)}
             </div>
 
-            <div className="mt-4 text-right">
+            <div className="mt-4 flex justify-between space-x-4">
               <button
                 onClick={clearCart}
                 className="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 hover:cursor-pointer"
               >
                 Clear Cart
+              </button>
+
+              <button
+                onClick={handlePayNow}
+                className={`py-2 px-4 rounded ${buttonClasses}`}
+              >
+                Pay Now
               </button>
             </div>
           </div>

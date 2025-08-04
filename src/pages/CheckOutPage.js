@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import useDarkMode from "../hooks/useDarkMode";
 
 function CheckOutPage() {
-  const { cart = [] } = useCart();
+  const { cart = [], clearCart } = useCart();
   const navigate = useNavigate();
   const [darkMode, setDarkMode] = useDarkMode();
 
@@ -29,10 +29,16 @@ function CheckOutPage() {
       return;
     }
 
+    const customerData = formData;
+    const cartData = [...cart]; 
+
+    clearCart();
+
+    // Navigate to order summary with cloned data
     navigate("/order-summary", {
       state: {
-        customer: formData,
-        cart,
+        customer: customerData,
+        cart: cartData,
       },
     });
   };
